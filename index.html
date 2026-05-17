@@ -1,1 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Little Place For You ❤️</title>
 
+<style>
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ffe4ec,#fff7fa);
+font-family:Georgia, serif;
+overflow:hidden;
+}
+
+.container{
+background:rgba(255,255,255,.8);
+backdrop-filter:blur(8px);
+padding:45px;
+width:500px;
+border-radius:30px;
+text-align:center;
+box-shadow:0 8px 30px rgba(0,0,0,.1);
+}
+
+h1{
+font-size:42px;
+color:#ff5c8a;
+margin-bottom:10px;
+}
+
+p{
+color:#666;
+line-height:1.5;
+}
+
+.buttons{
+margin-top:30px;
+}
+
+button{
+padding:12px 22px;
+margin:8px;
+border:none;
+border-radius:30px;
+background:white;
+font-size:15px;
+cursor:pointer;
+box-shadow:0 4px 10px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+button:hover{
+transform:translateY(-5px);
+}
+
+.star{
+position:absolute;
+font-size:15px;
+animation:float 8s linear infinite;
+opacity:.5;
+}
+
+@keyframes float{
+
+from{
+transform:translateY(100vh);
+}
+
+to{
+transform:translateY(-100px);
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>For the Days I Miss You ❤️</h1>
+
+<p>
+A little corner filled with thoughts,
+memories, and all the small things that
+make me think of you.
+</p>
+
+<div class="buttons">
+
+<button>💌 Unsent Thoughts</button>
+
+<button>🌙 Things I Miss</button>
+
+<button>✨ Tiny Memories</button>
+
+<button>💖 Future Us</button>
+
+</div>
+
+</div>
+
+<script>
+
+for(let i=0;i<20;i++){
+
+let star=document.createElement("div");
+
+star.className="star";
+
+star.innerHTML="♡";
+
+star.style.left=Math.random()*100+"vw";
+
+star.style.animationDuration=
+(Math.random()*5+4)+"s";
+
+document.body.appendChild(star);
+
+}
+
+</script>
+
+</body>
+</html>
