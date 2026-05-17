@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unsent Thoughts 💌</title>
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:Georgia, serif;
+background:linear-gradient(135deg,#ffe6ee,#fff8fb);
+overflow:hidden;
+}
+
+/* floating hearts */
+
+.heart{
+position:absolute;
+font-size:18px;
+opacity:.4;
+animation:float 7s linear infinite;
+}
+
+@keyframes float{
+
+from{
+transform:translateY(100vh);
+}
+
+to{
+transform:translateY(-100px);
+}
+
+}
+
+.letter{
+
+width:650px;
+padding:40px;
+background:#fffdfd;
+border-radius:30px;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.08);
+
+position:relative;
+z-index:2;
+
+}
+
+h1{
+
+text-align:center;
+color:#ff6f9e;
+margin-bottom:10px;
+
+}
+
+.subtitle{
+
+text-align:center;
+color:#777;
+margin-bottom:30px;
+
+}
+
+.prompt{
+
+background:#fff1f6;
+padding:15px;
+border-radius:15px;
+margin-bottom:25px;
+color:#666;
+font-style:italic;
+
+}
+
+textarea{
+
+width:100%;
+height:220px;
+
+border:none;
+outline:none;
+
+resize:none;
+
+font-size:16px;
+font-family:"Courier New", monospace;
+
+line-height:1.8;
+
+background-image:
+linear-gradient(
+transparent,
+transparent 31px,
+#ffd8e6 31px
+);
+
+background-size:100% 32px;
+
+padding:10px;
+
+}
+
+.homeButton{
+
+margin-top:30px;
+display:block;
+margin-left:auto;
+margin-right:auto;
+
+padding:12px 20px;
+
+border:none;
+border-radius:20px;
+
+background:#ff8eb4;
+color:white;
+
+cursor:pointer;
+
+font-size:15px;
+
+transition:.3s;
+
+}
+
+.homeButton:hover{
+
+transform:scale(1.05);
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="letter">
+
+<h1>💌 Unsent Thoughts</h1>
+
+<p class="subtitle">
+Things I want to say, even if I never send them.
+</p>
+
+<div class="prompt">
+
+Today's prompt:  
+"What would I tell him right now if I wasn't overthinking it?"
+
+</div>
+
+<textarea placeholder="Dear you..."></textarea>
+
+<button class="homeButton"
+onclick="location.href='index.html'">
+
+← Back Home
+
+</button>
+
+</div>
+
+
+<script>
+
+for(let i=0;i<15;i++){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="♡";
+
+heart.style.left=
+Math.random()*100+"vw";
+
+heart.style.animationDuration=
+(Math.random()*5+4)+"s";
+
+document.body.appendChild(heart);
+
+}
+
+</script>
+
+</body>
+
+</html>
