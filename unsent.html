@@ -14,17 +14,61 @@ display:flex;
 justify-content:center;
 align-items:center;
 font-family:Georgia, serif;
-background:linear-gradient(135deg,#ffe6ee,#fff8fb);
+background:linear-gradient(135deg,#ffe4ec,#fff6fa);
 overflow:hidden;
 }
 
-/* floating hearts */
+.letter{
+
+width:650px;
+padding:40px;
+background:white;
+border-radius:30px;
+text-align:center;
+
+box-shadow:
+0 10px 25px rgba(0,0,0,.1);
+
+position:relative;
+z-index:2;
+
+}
+
+h1{
+color:#ff6f9e;
+}
+
+.message{
+
+margin-top:25px;
+line-height:2;
+color:#666;
+font-size:18px;
+
+}
+
+button{
+
+margin-top:30px;
+
+padding:12px 20px;
+
+border:none;
+border-radius:20px;
+
+background:#ff8eb4;
+color:white;
+
+cursor:pointer;
+
+}
 
 .heart{
+
 position:absolute;
-font-size:18px;
 opacity:.4;
-animation:float 7s linear infinite;
+animation:float 8s linear infinite;
+
 }
 
 @keyframes float{
@@ -39,105 +83,6 @@ transform:translateY(-100px);
 
 }
 
-.letter{
-
-width:650px;
-padding:40px;
-background:#fffdfd;
-border-radius:30px;
-
-box-shadow:
-0 10px 30px rgba(0,0,0,.08);
-
-position:relative;
-z-index:2;
-
-}
-
-h1{
-
-text-align:center;
-color:#ff6f9e;
-margin-bottom:10px;
-
-}
-
-.subtitle{
-
-text-align:center;
-color:#777;
-margin-bottom:30px;
-
-}
-
-.prompt{
-
-background:#fff1f6;
-padding:15px;
-border-radius:15px;
-margin-bottom:25px;
-color:#666;
-font-style:italic;
-
-}
-
-textarea{
-
-width:100%;
-height:220px;
-
-border:none;
-outline:none;
-
-resize:none;
-
-font-size:16px;
-font-family:"Courier New", monospace;
-
-line-height:1.8;
-
-background-image:
-linear-gradient(
-transparent,
-transparent 31px,
-#ffd8e6 31px
-);
-
-background-size:100% 32px;
-
-padding:10px;
-
-}
-
-.homeButton{
-
-margin-top:30px;
-display:block;
-margin-left:auto;
-margin-right:auto;
-
-padding:12px 20px;
-
-border:none;
-border-radius:20px;
-
-background:#ff8eb4;
-color:white;
-
-cursor:pointer;
-
-font-size:15px;
-
-transition:.3s;
-
-}
-
-.homeButton:hover{
-
-transform:scale(1.05);
-
-}
-
 </style>
 </head>
 
@@ -147,28 +92,32 @@ transform:scale(1.05);
 
 <h1>💌 Unsent Thoughts</h1>
 
-<p class="subtitle">
-Things I want to say, even if I never send them.
+<p>
+Some things I think about but don't always say...
 </p>
 
-<div class="prompt">
+<div class="message">
 
-Today's prompt:  
-"What would I tell him right now if I wasn't overthinking it?"
+Sometimes I don't know if this is real or not. Like your real? I don't know tbh. It kind of just felt like I fallen from 
+  space and woke up in some new place. Like sometimes I cry when I think of you. I don't know, I guess I just wanna love
+  every surface of the struggles you face, all the worries, all the things you may bottle up. Your my baby after all. I sometimes
+  wish I can hug you when your down, and kiss your nose. I just end up feeling so mushy in my heart because I never felt this way. You make
+  my heart ache sometimes. It makes me turn into a little puppy, because sometimes I think all this time. You just been going about your days,
+  not getting any kisses from me. I don't know. I always wanted to get to know you more. It's always the quiet ones, who have the sweetest hearts.
+  You show it, in ur actions. It means a lot baby. Your like the complete opposite to what I expected. Your more than what people say or expect you as.
+  Your just a goofey loving boy. And deep down you you need a shoulder to rest on. I'm always here for you my baby. It's like I end up just
+  missing you, I don't wanna leave the call, and I end up sooooooooooooooo bored, because I love talking to you. I really do. I miss you everyday, every hour, second,
+  I miss everything. I miss the way you make weird sounds or smth. Anything to ease my heart out. Your presence is enough. 
+
+❤️
 
 </div>
 
-<textarea placeholder="Dear you..."></textarea>
-
-<button class="homeButton"
-onclick="location.href='index.html'">
-
+<button onclick="location.href='index.html'">
 ← Back Home
-
 </button>
 
 </div>
-
 
 <script>
 
@@ -180,8 +129,10 @@ heart.className="heart";
 
 heart.innerHTML="♡";
 
-heart.style.left=
-Math.random()*100+"vw";
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=
+(Math.random()*20+10)+"px";
 
 heart.style.animationDuration=
 (Math.random()*5+4)+"s";
@@ -193,5 +144,4 @@ document.body.appendChild(heart);
 </script>
 
 </body>
-
 </html>
